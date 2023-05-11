@@ -31,6 +31,12 @@ imap('jj', '<esc>')
 -- autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 -- autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 -- autocmd FileType rmd inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
+ nmap('j', 'gj')
+ nmap('k', 'gk')
+ nmap('<Up>', 'gk')
+ nmap('<Down>', 'gj')
+ nmap('<C-c>', '"+y')
+ nmap('<C-v>', '"+p')
 
 -- save with ctrl+s
 imap("<C-s>", "<cmd>:w<cr><esc>")

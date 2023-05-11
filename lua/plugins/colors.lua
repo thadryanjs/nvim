@@ -27,7 +27,7 @@ return {
   { 'rose-pine/neovim', name = 'rose-pine', config = function()
     require('rose-pine').setup({
       --- @usage 'auto'|'main'|'moon'|'dawn'
-      variant = 'auto',
+      variant = 'moon',
       --- @usage 'main'|'moon'|'dawn'
       dark_variant = 'main',
       bold_vert_split = false,
@@ -74,6 +74,7 @@ return {
         StatusLine = { fg = 'love', bg = 'love', blend = 10 },
       }
     })
+    vim.cmd('colorscheme rose-pine')
   end
   },
 
