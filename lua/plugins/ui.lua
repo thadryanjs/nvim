@@ -157,10 +157,10 @@ return {
   },
   
   -- show diagnostics list
-  -- { "folke/trouble.nvim", config = function()
-  --   require("trouble").setup {}
-  -- end
-  -- },
+  { "folke/trouble.nvim", config = function()
+    require("trouble").setup {}
+  end
+  },
 
   { 'lukas-reineke/indent-blankline.nvim', config = function()
     require("indent_blankline").setup {
