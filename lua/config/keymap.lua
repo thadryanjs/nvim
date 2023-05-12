@@ -241,7 +241,7 @@ wk.register(
 -- normal mode
 wk.register({
   ['<c-LeftMouse>'] = { '<cmd>lua vim.lsp.buf.definition()<CR>', 'go to definition' },
-  ["<c-q>"]         = { '<cmd>q<cr>', 'close buffer' },
+  -- ["<c-q>"]         = { '<cmd>q<cr>', 'close buffer' },
   ['<esc>']         = { '<cmd>noh<cr>', 'remove search highlight' },
   ['n']             = { 'nzzzv', 'center search' },
   ['gN']            = { 'Nzzzv', 'center search' },
