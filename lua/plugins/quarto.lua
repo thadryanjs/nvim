@@ -536,7 +536,7 @@ return {
 
       -- slime, neovvim terminal
       vim.g.slime_target = "neovim"
-      vim.g.slime_python_ipython = 1
+      -- vim.g.slime_python_ipython = 1
 
       -- -- slime, tmux
       -- vim.g.slime_target = 'tmux'

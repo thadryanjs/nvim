@@ -1,5 +1,8 @@
 vim.g.markdown_fenced_languages = { 'html', 'python', 'bash=sh', 'R=r' }
+-- vim.g.python3_host_prog = '/home/thadryan/anaconda3/envs/binf1/bin/python'
 vim.opt.termguicolors = true
+vim.opt.modifiable = true
+
 
 -- more opinionated
 vim.opt.number = true                  -- show linenumbers
@@ -15,7 +18,7 @@ vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
 vim.opt.shortmess:append 'A'
 
 -- use spaces as tabs
-local tabsize = 2
+local tabsize = 4
 vim.opt.expandtab = true
 vim.opt.shiftwidth = tabsize
 vim.opt.tabstop = tabsize
