@@ -70,3 +70,28 @@ vim.opt.formatoptions:remove({ 'c', 'r', 'o' })
 
 -- hide cmdline when not used
 vim.opt.cmdheight = 0
+
+
+-- commands
+vim.api.nvim_create_user_command(
+  'WordPprcessorMode',
+  function(input)
+      vim.cmd("set textwidth=0")
+      vim.cmd("set nonumber")
+      vim.cmd("set wrap")
+      vim.cmd("nmap j gj")
+      vim.cmd("nmap k gk")
+      vim.cmd("set linebreak")
+      vim.cmd("setlocal smartindent")
+      vim.cmd("setlocal noexpandtab")
+      vim.cmd("setlocal spell spelllang=en_us")
+      -- vim.cmd("hi clear SpellBad")
+      -- vim.cmd("hi SpellBad cterm=underline")
+      -- vim.cmd("hi clear SpellCap")
+  end,
+  {}
+)
+
+-- func! WordCount()
+--   :w !wc
+-- endfu
