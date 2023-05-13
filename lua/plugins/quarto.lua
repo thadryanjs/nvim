@@ -323,10 +323,13 @@ return {
         settings = {
           python = {
             analysis = {
+              -- changing to true doesn't fix conda
               autoSearchPaths = true,
               useLibraryCodeForTypes = true,
               diagnosticMode = 'openFilesOnly',
             },
+            -- why doesn't this work?
+            pythonPath = '/home/thadryan/anaconda3/envs/binf1/bin/python',
           },
         },
         root_dir = function(fname)

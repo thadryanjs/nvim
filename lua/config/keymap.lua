@@ -37,6 +37,8 @@ imap('jj', '<esc>')
  nmap('<Down>', 'gj')
  nmap('<C-c>', '"+y')
  nmap('<C-v>', '"+p')
+ -- not sure why this works but the above doesn't, this is better though
+ nmap('y', '"+y')
 
 -- save with ctrl+s
 imap("<C-s>", "<cmd>:w<cr><esc>")

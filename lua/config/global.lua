@@ -1,8 +1,10 @@
 vim.g.markdown_fenced_languages = { 'html', 'python', 'bash=sh', 'R=r' }
--- vim.g.python3_host_prog = '/home/thadryan/anaconda3/envs/binf1/bin/python'
 vim.opt.termguicolors = true
 vim.opt.modifiable = true
 
+-- Python environment (doesn't work in quarto)
+vim.g.python3_host_prog = '/home/thadryan/anaconda3/envs/binf1/bin/python'
+vim.env.VIRTUAL_ENV = '/home/thadryan/anaconda3/envs/binf1/bin/python'
 
 -- more opinionated
 vim.opt.number = true                  -- show linenumbers
