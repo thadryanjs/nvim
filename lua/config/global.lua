@@ -2,9 +2,9 @@ vim.g.markdown_fenced_languages = { 'html', 'python', 'bash=sh', 'R=r' }
 vim.opt.termguicolors = true
 vim.opt.modifiable = true
 
--- Python environment (doesn't work in quarto)
-vim.g.python3_host_prog = '/home/thadryan/anaconda3/envs/binf1/bin/python'
-vim.env.VIRTUAL_ENV = '/home/thadryan/anaconda3/envs/binf1/bin/python'
+-- Python environment (doesn't work in quarto for regular Python)
+-- vim.g.python3_host_prog = '/home/thadryan/anaconda3/envs/binf1/bin/python'
+-- vim.env.VIRTUAL_ENV = '/home/thadryan/anaconda3/envs/binf1/bin/python'
 
 -- more opinionated
 vim.opt.number = true                  -- show linenumbers
@@ -14,7 +14,7 @@ vim.opt.updatetime = 250               -- for autocommands and hovers
 vim.opt.mouse = 'a'                    -- enable mouse
 vim.opt.mousefocus = true
 vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
-
+vim.opt.linebreak = true
 
 -- don't ask about existing swap files
 vim.opt.shortmess:append 'A'

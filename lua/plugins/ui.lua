@@ -168,5 +168,10 @@ return {
       show_current_context_start = false,
     }
   end
-  },
+  }
+  -- ,
+  -- {"nvim-tree/nvim-web-devicons", config = function()
+  --   require("nvim-web-devicons").set_default_icon('-', '#6d8086', 65)
+  -- end
+  -- }
 }
