@@ -282,13 +282,14 @@ return {
         return strsplit(s, '\n')[2]
       end
 
-      ---- These cause an error on startup but don't seem to hurt when I comment them out?
-      
-      -- local lua_library_files = vim.api.nvim_get_runtime_file("", true)
-      -- local resource_path = get_quarto_resource_path()
-      -- -- table.insert(lua_library_files, resource_path .. '/lua-types')
-      -- local lua_plugin_paths = {}
-      -- table.insert(lua_plugin_paths, resource_path .. '/lua-plugin/plugin.lua')
+      ---- These cause an error on startup but don't I'm not sure what it does and
+      ---- changing it messes with a few things
+        
+      local lua_library_files = vim.api.nvim_get_runtime_file("", true)
+      local resource_path = get_quarto_resource_path()
+      -- table.insert(lua_library_files, resource_path .. '/lua-types')
+      local lua_plugin_paths = {}
+      table.insert(lua_plugin_paths, resource_path .. '/lua-plugin/plugin.lua')
 
       -- not upadated yet in automatic mason-lspconfig install,
       -- open mason manually with `<space>vm` and `/` search for lua.
@@ -546,9 +547,9 @@ return {
       -- vim.g.slime_python_ipython = 1
 
       -- -- slime, tmux
-      vim.g.slime_target = 'tmux'
-      vim.g.slime_bracketed_paste = 1
-      vim.g.slime_default_config = { socket_name = "default", target_pane = ".2" }
+      -- vim.g.slime_target = 'tmux'
+      -- vim.g.slime_bracketed_paste = 1
+      -- vim.g.slime_default_config = { socket_name = "default", target_pane = ".2" }
 
       local function toggle_slime_tmux_nvim()
         if vim.g.slime_target == 'tmux' then

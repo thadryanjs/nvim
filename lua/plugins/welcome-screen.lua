@@ -25,7 +25,7 @@ return {
         dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
         dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h<cr>"),
         dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
-        dashboard.button('u', '  Update plugins', ':Lazy update<CR>'),
+        dashboard.button("u", "  > Update plugins", ":Lazy update<CR>"),
       }
 
       -- local fortune = require("alpha.fortune")
