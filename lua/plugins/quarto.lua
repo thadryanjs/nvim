@@ -228,6 +228,8 @@ return {
       capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
       capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+      -- create this file, see: https://github.com/artempyanykh/marksman/blob/main/docs/configuration.md
+      -- install marksman (it's a serparate thing, not just a plugin)
       -- also needs:
       -- $home/.config/marksman/config.toml :
       -- [core]
