@@ -92,7 +92,7 @@ return {
           section_separators = '',
           component_separators = '',
           globalstatus = true,
-          theme = "catppuccin",
+          theme = "rose-pine",
         },
         sections = {
           lualine_a = {'mode', {macro_reg, type = 'lua_expr', color = 'WarningMsg'} },

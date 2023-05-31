@@ -282,11 +282,13 @@ return {
         return strsplit(s, '\n')[2]
       end
 
-      local lua_library_files = vim.api.nvim_get_runtime_file("", true)
-      local resource_path = get_quarto_resource_path()
-      table.insert(lua_library_files, resource_path .. '/lua-types')
-      local lua_plugin_paths = {}
-      table.insert(lua_plugin_paths, resource_path .. '/lua-plugin/plugin.lua')
+      ---- These cause an error on startup but don't seem to hurt when I comment them out?
+      
+      -- local lua_library_files = vim.api.nvim_get_runtime_file("", true)
+      -- local resource_path = get_quarto_resource_path()
+      -- -- table.insert(lua_library_files, resource_path .. '/lua-types')
+      -- local lua_plugin_paths = {}
+      -- table.insert(lua_plugin_paths, resource_path .. '/lua-plugin/plugin.lua')
 
       -- not upadated yet in automatic mason-lspconfig install,
       -- open mason manually with `<space>vm` and `/` search for lua.
