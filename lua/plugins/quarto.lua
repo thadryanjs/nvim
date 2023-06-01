@@ -287,7 +287,7 @@ return {
         
       local lua_library_files = vim.api.nvim_get_runtime_file("", true)
       local resource_path = get_quarto_resource_path()
-      -- table.insert(lua_library_files, resource_path .. '/lua-types')
+      table.insert(lua_library_files, resource_path .. '/lua-types')
       local lua_plugin_paths = {}
       table.insert(lua_plugin_paths, resource_path .. '/lua-plugin/plugin.lua')
 
