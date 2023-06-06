@@ -287,9 +287,13 @@ return {
         
       local lua_library_files = vim.api.nvim_get_runtime_file("", true)
       local resource_path = get_quarto_resource_path()
-      table.insert(lua_library_files, resource_path .. '/lua-types')
+      -- table.insert(lua_library_files, resource_path .. '/lua-types')
+      table.insert(lua_library_files, '/opt/quarto/bin' .. '/lua-types') 
+      table.insert(lua_library_files, '/opt/quarto/share' .. '/lua-types') 
+
       local lua_plugin_paths = {}
-      table.insert(lua_plugin_paths, resource_path .. '/lua-plugin/plugin.lua')
+      table.insert(lua_plugin_paths, 'opt/quarto/bin' .. '/lua-plugin/plugin.lua')
+      table.insert(lua_plugin_paths, 'opt/quarto/share' .. '/lua-plugin/plugin.lua')
 
       -- not upadated yet in automatic mason-lspconfig install,
       -- open mason manually with `<space>vm` and `/` search for lua.
