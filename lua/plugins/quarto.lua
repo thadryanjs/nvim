@@ -252,8 +252,8 @@ return {
       lspconfig.r_language_server.setup {
         on_attach = on_attach,
         capabilities = capabilities,
-        flags = lsp_flags,
-        cmd = { "/home/thadryan/anaconda3/envs/test/bin/R", "--slave", "-e", "languageserver::run()" }
+        flags = lsp_flags--,
+        -- cmd = { "/home/thadryan/anaconda3/envs/test/bin/R", "--slave", "-e", "languageserver::run()" }
       }
 
       lspconfig.emmet_ls.setup {

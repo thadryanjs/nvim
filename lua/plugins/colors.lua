@@ -78,6 +78,7 @@ return {
   end
   },
 
+  {'flazz/vim-colorschemes'},
 
   -- color html colors
   { 'norcalli/nvim-colorizer.lua', config = function()
