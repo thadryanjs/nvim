@@ -32,7 +32,7 @@ return {
     {'kkharji/sqlite.lua', module = 'sqlite'},
     -- you'll need at least one of these
     {'nvim-telescope/telescope.nvim'},
-    -- {'ibhagwan/fzf-lua'},
+    {'ibhagwan/fzf-lua'},
   },
   config = function()
     require('neoclip').setup()
@@ -43,7 +43,7 @@ return {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "debugloop/telescope-undo.nvim",
+      "debugloop/telescope-undo.nvim"
     },
     config = function()
       require("telescope").setup({
@@ -61,7 +61,6 @@ return {
       -- optional: vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>")
     end,
   },
-
 
 
 
