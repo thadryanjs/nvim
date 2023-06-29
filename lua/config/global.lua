@@ -73,6 +73,13 @@ vim.opt.formatoptions:remove({ 'c', 'r', 'o' })
 -- hide cmdline when not used
 vim.opt.cmdheight = 0
 
+vim.diagnostic.config({
+  virtual_text = false
+})
+
+-- Show line diagnostics automatically in hover window
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 -- commands
 vim.api.nvim_create_user_command(
