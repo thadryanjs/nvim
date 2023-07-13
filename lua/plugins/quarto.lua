@@ -86,7 +86,7 @@ return {
         },
         highlight = {
           enable = true,
-          additional_vim_regex_highlighting = false,
+          additional_vim_regex_highlighting = true,
           -- optional (with quarto-vim extension and pandoc-syntax)
           -- additional_vim_regex_highlighting = { 'markdown' },
 
@@ -552,9 +552,9 @@ return {
       -- vim.g.slime_python_ipython = 1
 
       -- -- slime, tmux
-      -- vim.g.slime_target = 'tmux'
-      -- vim.g.slime_bracketed_paste = 1
-      -- vim.g.slime_default_config = { socket_name = "default", target_pane = ".2" }
+      vim.g.slime_target = 'tmux'
+      vim.g.slime_bracketed_paste = 1
+      vim.g.slime_default_config = { socket_name = "default", target_pane = ".2" }
 
       local function toggle_slime_tmux_nvim()
         if vim.g.slime_target == 'tmux' then
