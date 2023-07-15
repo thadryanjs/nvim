@@ -17,6 +17,8 @@ vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
 vim.opt.linebreak = true
 vim.opt.autochdir = true
 vim.opt.undofile = true
+vim.opt.cursorline = true
+vim.opt.guifont='CascadiaCode'
 
 -- don't ask about existing swap files
 vim.opt.shortmess:append 'A'
@@ -100,6 +102,7 @@ vim.api.nvim_create_user_command(
   end,
   {}
 )
+
 
 -- func! WordCount()
 --   :w !wc
