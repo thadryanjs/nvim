@@ -45,7 +45,7 @@ return {
       "nvim-lua/plenary.nvim",
       "debugloop/telescope-undo.nvim",
       "MattesGroeger/vim-bookmarks",
-      -- "tom-anders/telescope-vim-bookmarks.nvim"
+      "tom-anders/telescope-vim-bookmarks.nvim"
     },
     config = function()
       require("telescope").setup({
@@ -61,12 +61,12 @@ return {
       })
       require("telescope").load_extension("undo")
       require('telescope').load_extension('vim_bookmarks').setup({})
-      -- require('telescope').extensions.vim_bookmarks.all()
+      require('telescope').extensions.vim_bookmarks.all({
+
+      })
       -- require('telescope').extensions.vim_bookmarks.current_file()
 
       -- optional: vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>")
     end,
-  },
-  { 'Shougo/unite.vim' }
-
+  }
 }

@@ -89,7 +89,7 @@ vim.g.bookmark_auto_save_file = "/home/thadryan/Documents/Templates/vim-bookmark
 
 -- commands
 vim.api.nvim_create_user_command(
-  'WordPprcessorMode',
+  'WordProcessorMode',
   function(input)
       vim.cmd("set textwidth=0")
       vim.cmd("set nonumber")
@@ -103,6 +103,24 @@ vim.api.nvim_create_user_command(
       -- vim.cmd("hi clear SpellBad")
       -- vim.cmd("hi SpellBad cterm=underline")
       -- vim.cmd("hi clear SpellCap")
+  end,
+  {}
+)
+
+--
+vim.api.nvim_create_user_command(
+  'TelescopeBookmarks',
+  function(input)
+      vim.cmd("lua require('telescope').extensions.vim_bookmarks.all({width_text=45})")
+  end,
+  {}
+)
+
+
+vim.api.nvim_create_user_command(
+  'TelescopeBookmarksCurrentFile',
+  function(input)
+      vim.cmd("lua require('telescope').extensions.vim_bookmarks.current_file({width_text=45})")
   end,
   {}
 )
