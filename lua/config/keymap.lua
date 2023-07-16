@@ -122,12 +122,12 @@ end
 --show up in the popup as well
 wk.register(
   {
-    b = {
-        name = 'bookmarks',
-        a = { ':lua require"ezbookmarks".AddBookmark()<cr>' , 'add bookmark'},
-        b = { ':lua require"ezbookmarks".OpenBookmark()<cr>', 'open bookmarks'},
-        r = { ':lua require"ezbookmarks".RemoveBookmark()<cr>', 'remove bookmark'}
-    },
+    -- b = {
+    --     name = 'bookmarks',
+    --     a = { ':lua require"ezbookmarks".AddBookmark()<cr>' , 'add bookmark'},
+    --     b = { ':lua require"ezbookmarks".OpenBookmark()<cr>', 'open bookmarks'},
+    --     r = { ':lua require"ezbookmarks".RemoveBookmark()<cr>', 'remove bookmark'}
+    -- },
     c = {
       name = 'code',
       c = { ':SlimeConfig<cr>', 'slime config' },

@@ -83,6 +83,10 @@ vim.diagnostic.config({
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
+
+--
+vim.g.bookmark_auto_save_file = "/home/thadryan/Documents/Templates/vim-bookmarks.txt"
+
 -- commands
 vim.api.nvim_create_user_command(
   'WordPprcessorMode',
