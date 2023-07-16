@@ -78,7 +78,10 @@ return {
   end
   },
 
-  {'flazz/vim-colorschemes'},
+  -- this has a lot of great themes but does something that makes me nuts
+  -- to the match paren settings and I don't know how to change it lol
+  -- {'flazz/vim-colorschemes'},
+  { 'whatyouhide/vim-gotham'},
 
   -- color html colors
   { 'norcalli/nvim-colorizer.lua', config = function()
