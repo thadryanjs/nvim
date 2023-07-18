@@ -446,15 +446,34 @@ return {
           ['<CR>'] = cmp.mapping.confirm({
             select = true,
           }),
-          ["<Tab>"] = cmp.mapping(function(fallback)
+        -- https://www.reddit.com/r/neovim/comments/sk70rk/using_github_copilot_in_neovim_tab_map_has_been/
+        ['<Tab>'] = cmp.mapping(function(fallback)
+            local copilot_keys = vim.fn['copilot#Accept']()
             if cmp.visible() then
-              cmp.select_next_item()
-            elseif has_words_before() then
-              cmp.complete()
+                cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+            elseif copilot_keys ~= '' and type(copilot_keys) == 'string' then
+                vim.api.nvim_feedkeys(copilot_keys, 'i', true)
             else
-              fallback()
-            end
-          end, { "i", "s" }),
+                fallback()
+        end
+            end, {
+            'i',
+            's',
+        }),
+        -- this is before I added copilot
+        --          ["<Tab>"] = cmp.mapping(function(fallback)
+        --            if cmp.visible() then
+        --              cmp.select_next_item()
+        --            elseif has_words_before() then
+        --              cmp.complete()
+        --            else
+        --              fallback()
+        --            end
+        --          end, { "i", "s" }),
+
+
           ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item()
