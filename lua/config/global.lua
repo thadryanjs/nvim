@@ -87,6 +87,9 @@ vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {f
 --
 vim.g.bookmark_auto_save_file = "/home/thadryan/Documents/Templates/vim-bookmarks.txt"
 
+vim.g.copilot_assume_mapped = true
+
+
 -- commands
 vim.api.nvim_create_user_command(
   'WordProcessorMode',
