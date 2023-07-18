@@ -73,7 +73,7 @@ vim.opt.winbar = '%t'
 vim.opt.formatoptions:remove({ 'c', 'r', 'o' })
 
 -- hide cmdline when not used
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
 
 vim.diagnostic.config({
   virtual_text = false
@@ -83,12 +83,11 @@ vim.diagnostic.config({
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
-
---
+-- bookmarks saved in a persistent, back-ed up file
 vim.g.bookmark_auto_save_file = "/home/thadryan/Documents/Templates/vim-bookmarks.txt"
 
-vim.g.copilot_assume_mapped = true
-
+-- Copilot stuff
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("")', {expr=true, noremap=true, script=true})
 
 -- commands
 vim.api.nvim_create_user_command(

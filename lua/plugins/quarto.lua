@@ -447,32 +447,45 @@ return {
             select = true,
           }),
         -- https://www.reddit.com/r/neovim/comments/sk70rk/using_github_copilot_in_neovim_tab_map_has_been/
-        ['<Tab>'] = cmp.mapping(function(fallback)
-            local copilot_keys = vim.fn['copilot#Accept']()
-            if cmp.visible() then
-                cmp.select_next_item()
-            elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
-            elseif copilot_keys ~= '' and type(copilot_keys) == 'string' then
-                vim.api.nvim_feedkeys(copilot_keys, 'i', true)
-            else
-                fallback()
-        end
-            end, {
-            'i',
-            's',
-        }),
+        -- ['<Tab>'] = cmp.mapping(function(fallback)
+        --     local copilot_keys = vim.fn['copilot#Accept']()
+        --     if cmp.visible() then
+        --         cmp.select_next_item()
+        --     elseif luasnip.expand_or_jumpable() then
+        --         luasnip.expand_or_jump()
+        --     elseif copilot_keys ~= '' and type(copilot_keys) == 'string' then
+        --         vim.api.nvim_feedkeys(copilot_keys, 'i', true)
+        --     else
+        --         fallback()
+        -- end
+        --     end, {
+        --     'i',
+        --     's',
+        -- }),
         -- this is before I added copilot
-        --          ["<Tab>"] = cmp.mapping(function(fallback)
-        --            if cmp.visible() then
-        --              cmp.select_next_item()
-        --            elseif has_words_before() then
-        --              cmp.complete()
-        --            else
-        --              fallback()
-        --            end
-        --          end, { "i", "s" }),
+       ["<Tab>"] = cmp.mapping(function(fallback)
+         if cmp.visible() then
+           cmp.select_next_item()
+         elseif has_words_before() then
+           cmp.complete()
+         else
+           fallback()
+         end
+       end, { "i", "s" }),
 
+       -- this is my attempt at hybridizing them
+      -- ["<Tab>"] = cmp.mapping(function(fallback)
+      --     local copilot_keys = vim.fn['copilot#Accept']()
+      --         if cmp.visible() then
+      --             cmp.select_next_item()
+      --         elseif has_words_before() then
+      --             cmp.complete()
+      --         elseif copilot_keys ~= '' and type(copilot_keys) == 'string' then
+      --             vim.api.nvim_feedkeys(copilot_keys, 'i', true)
+      --         else
+      --             fallback()
+      --         end
+      --     end, { "i", "s" }),
 
           ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
@@ -570,10 +583,10 @@ return {
       vim.g.slime_target = "neovim"
       -- vim.g.slime_python_ipython = 1
 
-      -- -- slime, tmux
-      vim.g.slime_target = 'tmux'
-      vim.g.slime_bracketed_paste = 1
-      vim.g.slime_default_config = { socket_name = "default", target_pane = ".2" }
+    -- -- slime, tmux
+--        vim.g.slime_target = 'tmux'
+--        vim.g.slime_bracketed_paste = 1
+--        vim.g.slime_default_config = { socket_name = "default", target_pane = ".2" }
 
       local function toggle_slime_tmux_nvim()
         if vim.g.slime_target == 'tmux' then
