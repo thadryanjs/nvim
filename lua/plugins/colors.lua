@@ -83,6 +83,14 @@ return {
   -- {'flazz/vim-colorschemes'},
   { 'whatyouhide/vim-gotham'},
 
+    {'rockerBOO/boo-colorscheme-nvim',
+    config = function()
+        require("boo-colorscheme").use({
+            italic = false, -- toggle italics
+            theme = "boo"
+        })
+    end
+    },
   -- color html colors
   { 'norcalli/nvim-colorizer.lua', config = function()
     require 'colorizer'.setup {

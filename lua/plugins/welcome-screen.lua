@@ -18,8 +18,8 @@ return {
         "                                                    ",
       }
 
-      -- Set menu
-      dashboard.section.buttons.val = {
+        -- Set menu
+        dashboard.section.buttons.val = {
         dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
         dashboard.button("f", "  > Find file", ":Telescope find_files<CR>"),
         dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
@@ -28,15 +28,16 @@ return {
         dashboard.button("u", "  > Update plugins", ":Lazy update<CR>"),
       }
 
-      -- local fortune = require("alpha.fortune")
-      -- dashboard.section.footer.val = fortune({
-      --   fortune_list = {
-      --     { "You otter be proud of yourself!", "", "— 🦦" },
-      --     { "Hello from the otter slide!", "", "— Otterdele" },
-      --     { "To otter space!", "", "— 🦦" },
-      --     { "What if I say I'm not like the otters?", "", "— Foo Fighters" },
-      --   }
-      -- })
+      local fortune = require("alpha.fortune")
+      dashboard.section.footer.val = fortune({
+        fortune_list = {
+
+          { "'I tell you, we are here on Earth to fart around, and don't let anybody tell you different.'",
+                        "", "— Kurt Vonnegut, A Man Without a Country." },
+
+
+        }
+      })
 
       -- Send config to alpha
       alpha.setup(dashboard.opts)

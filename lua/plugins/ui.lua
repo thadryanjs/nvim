@@ -161,14 +161,14 @@ return {
      require("trouble").setup {}
    end
    },
-    {"lifer0se/ezbookmarks.nvim", config = function()
-        require('ezbookmarks').setup{
-            cwd_on_open = 1,        -- change directory when opening a bookmark
-            use_bookmark_dir = 0,   -- if a bookmark is part of a bookmarked directory, cd to that direcrtory (works independently of cwd_on_open)
-            open_new_tab = 0,       -- open bookmark in a new tab.
-        }
-    end 
-    }
+    -- {"lifer0se/ezbookmarks.nvim", config = function()
+    --     require('ezbookmarks').setup{
+    --         cwd_on_open = 1,        -- change directory when opening a bookmark
+    --         use_bookmark_dir = 0,   -- if a bookmark is part of a bookmarked directory, cd to that direcrtory (works independently of cwd_on_open)
+    --         open_new_tab = 0,       -- open bookmark in a new tab.
+    --     }
+    -- end 
+    -- }
   -- { 'lukas-reineke/indent-blankline.nvim', config = function()
   --   require("indent_blankline").setup {
   --     show_current_context = true,

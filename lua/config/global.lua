@@ -89,6 +89,10 @@ vim.g.bookmark_auto_save_file = "/home/thadryan/Documents/Templates/vim-bookmark
 -- Copilot stuff
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("")', {expr=true, noremap=true, script=true})
 
+-- colorscheme options for BOO
+vim.g.boo_colorscheme_italic = false
+
+
 -- commands
 vim.api.nvim_create_user_command(
   'WordProcessorMode',
