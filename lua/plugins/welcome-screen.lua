@@ -18,6 +18,35 @@ return {
         "                                                    ",
       }
 
+      dashboard.section.header.val = {
+           "                              .............                                   ", 
+           "                        ..';;,...       .....   .......                       ",
+           "                       ''.'...              ';'..........                     ",
+           "                       ..';,.',.         .,::c;.        ..                    ",
+           "                          .;,'.         .::.            ';......              ",
+           "                       .''::;;,.     ....              ,:'     ..             ",
+           "                       .;c,'ldlc;.    ...;'  ..       .;.       '.            ",
+           "                       ... 'loc:ll.  ',';lc,'...'.    ,.        ..            ",
+           "                     ...   'dddkd:..:c::lc::'.';;.   .,.       ..             ",
+           "                   ...     ;oo:'   ,;,okdc.;:''.     .'       .:;.            ",
+           "                 ...       ..     .cllodl::od:.      :l'..    ....'.          ",
+           "              ....               .;ldllol;..lc.....  :l.          .'.         ",
+           "           .....                  ,;',ldc. .l,   .;:,::.          .'          ",
+           "          .;;..........cl:::.    .c,  ,c'  ,o;.  .;c:.'.         .'.          ",
+           "                       ;doxx'   .c:   ....'c:,. .'.,. '.        .'.           ",
+           "                       cOk0O,   ,;        .',;;.;:c:. .'. ..  .,:'            ",
+           "                   ...,xKKKd.  .'.          ,clokxl;.. .....    .'.           ",
+           "                 ..;ooloodx:                 .;cl,               .'.          ",
+           "                         .:.                 ...,.        ..   ..'.           ",
+           "                         .:.                   .,.         ......             ",
+           "                         .;.                   ..                             ",
+           "                         .;.                                                  ",
+           "                         .;'                                                  ",
+           "                          ,,                                                  ",
+           "                          ';.                                                 ",
+           "                          .;'                                                 ",
+           "                           ..                                                 "
+        }
         -- Set menu
         dashboard.section.buttons.val = {
         dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
@@ -33,7 +62,7 @@ return {
         fortune_list = {
 
           { "'I tell you, we are here on Earth to fart around, and don't let anybody tell you different.'",
-                        "", "— Kurt Vonnegut, A Man Without a Country." },
+                        "", "— Kurt Vonnegut, 'A Man Without a Country.'" },
 
 
         }
