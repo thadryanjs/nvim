@@ -161,6 +161,9 @@ return {
      require("trouble").setup {}
    end
    },
+    --{"vimpostor/vim-tpipeline"
+
+    --}
     -- {"lifer0se/ezbookmarks.nvim", config = function()
     --     require('ezbookmarks').setup{
     --         cwd_on_open = 1,        -- change directory when opening a bookmark

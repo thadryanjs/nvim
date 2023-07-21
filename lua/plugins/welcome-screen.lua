@@ -18,43 +18,45 @@ return {
         "                                                    ",
       }
 
-      dashboard.section.header.val = {
-           "                              .............                                   ", 
-           "                        ..';;,...       .....   .......                       ",
-           "                       ''.'...              ';'..........                     ",
-           "                       ..';,.',.         .,::c;.        ..                    ",
-           "                          .;,'.         .::.            ';......              ",
-           "                       .''::;;,.     ....              ,:'     ..             ",
-           "                       .;c,'ldlc;.    ...;'  ..       .;.       '.            ",
-           "                       ... 'loc:ll.  ',';lc,'...'.    ,.        ..            ",
-           "                     ...   'dddkd:..:c::lc::'.';;.   .,.       ..             ",
-           "                   ...     ;oo:'   ,;,okdc.;:''.     .'       .:;.            ",
-           "                 ...       ..     .cllodl::od:.      :l'..    ....'.          ",
-           "              ....               .;ldllol;..lc.....  :l.          .'.         ",
-           "           .....                  ,;',ldc. .l,   .;:,::.          .'          ",
-           "          .;;..........cl:::.    .c,  ,c'  ,o;.  .;c:.'.         .'.          ",
-           "                       ;doxx'   .c:   ....'c:,. .'.,. '.        .'.           ",
-           "                       cOk0O,   ,;        .',;;.;:c:. .'. ..  .,:'            ",
-           "                   ...,xKKKd.  .'.          ,clokxl;.. .....    .'.           ",
-           "                 ..;ooloodx:                 .;cl,               .'.          ",
-           "                         .:.                 ...,.        ..   ..'.           ",
-           "                         .:.                   .,.         ......             ",
-           "                         .;.                   ..                             ",
-           "                         .;.                                                  ",
-           "                         .;'                                                  ",
-           "                          ,,                                                  ",
-           "                          ';.                                                 ",
-           "                          .;'                                                 ",
-           "                           ..                                                 "
-        }
+--       dashboard.section.header.val = {
+--            "                              .............                                   ", 
+--            "                        ..';;,...       .....   .......                       ",
+--            "                       ''.'...              ';'..........                     ",
+--            "                       ..';,.',.         .,::c;.        ..                    ",
+--            "                          .;,'.         .::.            ';......              ",
+--            "                       .''::;;,.     ....              ,:'     ..             ",
+--            "                       .;c,'ldlc;.    ...;'  ..       .;.       '.            ",
+--            "                       ... 'loc:ll.  ',';lc,'...'.    ,.        ..            ",
+--            "                     ...   'dddkd:..:c::lc::'.';;.   .,.       ..             ",
+--            "                   ...     ;oo:'   ,;,okdc.;:''.     .'       .:;.            ",
+--            "                 ...       ..     .cllodl::od:.      :l'..    ....'.          ",
+--            "              ....               .;ldllol;..lc.....  :l.          .'.         ",
+--            "           .....                  ,;',ldc. .l,   .;:,::.          .'          ",
+--            "          .;;..........cl:::.    .c,  ,c'  ,o;.  .;c:.'.         .'.          ",
+--            "                       ;doxx'   .c:   ....'c:,. .'.,. '.        .'.           ",
+--            "                       cOk0O,   ,;        .',;;.;:c:. .'. ..  .,:'            ",
+--            "                   ...,xKKKd.  .'.          ,clokxl;.. .....    .'.           ",
+--            "                 ..;ooloodx:                 .;cl,               .'.          ",
+--            "                         .:.                 ...,.        ..   ..'.           ",
+--            "                         .:.                   .,.         ......             ",
+--            "                         .;.                   ..                             ",
+--            "                         .;.                                                  ",
+--            "                         .;'                                                  ",
+--            "                          ,,                                                  ",
+--            "                          ';.                                                 ",
+--            "                          .;'                                                 ",
+--            "                           ..                                                 "
+--         }
+
         -- Set menu
         dashboard.section.buttons.val = {
+        dashboard.button("b", "󰂺  > Bookmarks", ":TelescopeBookmarks<CR>"),
         dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
         dashboard.button("f", "  > Find file", ":Telescope find_files<CR>"),
         dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
         dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h<cr>"),
         dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
-        dashboard.button("u", "  > Update plugins", ":Lazy update<CR>"),
+        dashboard.button("u", "  > Update plugins", ":Lazy update<CR>")
       }
 
       local fortune = require("alpha.fortune")
