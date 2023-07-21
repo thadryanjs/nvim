@@ -1,10 +1,11 @@
 return {
   -- dashboard to greet
   { 'goolord/alpha-nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    dependencies = { 'nvim-tree/nvim-web-devicons'},
     config = function()
       local alpha = require("alpha")
       local dashboard = require("alpha.themes.dashboard")
+      local tree = require("nvim-tree")
 
       -- Set header
       dashboard.section.header.val = {
@@ -55,6 +56,7 @@ return {
         dashboard.button("f", "  > Find file", ":Telescope find_files<CR>"),
         dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
         dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h<cr>"),
+        dashboard.button("h", "󱉽  > Vault Home", ":e /home/thadryan/Documents/Vault/Home.md<CR> | :NvimTreeOpen<CR>"),
         dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
         dashboard.button("u", "  > Update plugins", ":Lazy update<CR>")
       }
