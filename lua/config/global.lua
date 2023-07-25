@@ -94,6 +94,7 @@ vim.g.boo_colorscheme_italic = false
 
 -- fine commandline
 vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader> b", "<cmd>Telescope buffers<CR>", {noremap = true})
 
 -- commands
 vim.api.nvim_create_user_command(
