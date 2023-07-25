@@ -92,6 +92,8 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("")', {expr=true, noremap=
 -- colorscheme options for BOO
 vim.g.boo_colorscheme_italic = false
 
+-- fine commandline
+vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
 
 -- commands
 vim.api.nvim_create_user_command(

@@ -161,6 +161,13 @@ return {
      require("trouble").setup {}
    end
    },
+    {"MunifTanjim/nui.nvim"},
+    {"VonHeikemen/fine-cmdline.nvim", 
+        depends = {
+        {"MunifTanjim/nui.nvim"},
+
+        },
+    }
     --{"vimpostor/vim-tpipeline"
 
     --}
