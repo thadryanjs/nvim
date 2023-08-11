@@ -28,9 +28,9 @@ end
 
 -- Map Esc to kk
 imap('jj', '<esc>')
--- autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
--- autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
--- autocmd FileType rmd inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
+-- autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a
+-- autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a
+-- autocmd FileType rmd inoremap <buffer> > <Esc>:normal! a %>%<CR>a
  nmap('j', 'gj')
  nmap('k', 'gk')
  nmap('<Up>', 'gk')
@@ -233,6 +233,10 @@ wk.register(
         o = { ':DiffviewOpen<cr>', 'open' },
         c = { ':DiffviewClose<cr>', 'close' },
       }
+    },
+    u = {
+      name = 'undotree',
+      u = { ":UndotreeToggle<cr>", "toggle" },
     },
     w = {
       name = 'write',
