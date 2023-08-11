@@ -288,4 +288,5 @@ wk.register({
   ['<m-i>'] = { '```{r}<cr>```<esc>O', "r code chunk" },
   ['<cm-i>'] = { '<esc>o```{python}<cr>```<esc>O', "r code chunk" },
   ['<m-I>'] = { '<esc>o```{python}<cr>```<esc>O', "r code chunk" },
+  ['<m-t>'] = { '- [ ] ', "obsidian task" },
 }, { mode = 'i' })

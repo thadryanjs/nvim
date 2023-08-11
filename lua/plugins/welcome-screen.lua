@@ -56,7 +56,7 @@ return {
         dashboard.button("b", "󰂺  > Bookmarks", ":TelescopeBookmarks<CR>"),
         dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
         dashboard.button("f", "  > Find file", ":Telescope find_files<CR>"),
-        dashboard.button("h", "󱉽  > Vault Home", ":e /home/thadryan/Documents/Vault/WorkingMemory.md<CR> | :NvimTreeOpen<CR>"),
+        dashboard.button("h", "󱉽  > Vault Home", ":e /home/thadryan/Documents/Vault/0_working-memory.md<CR> | :NvimTreeOpen<CR>"),
         dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
         dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
         dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h<cr>"),

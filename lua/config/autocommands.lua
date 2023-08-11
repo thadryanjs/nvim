@@ -22,6 +22,13 @@ vim.api.nvim_create_autocmd({ "TermOpen" }, {
 }
 )
 
+
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
+})
+
 -- autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 -- autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 -- autocmd FileType rmd inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
+--autocmd BufWritePre * :%s/\s\+$//e
