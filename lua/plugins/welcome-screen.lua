@@ -15,14 +15,14 @@ return {
         " ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
         " ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
         " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
-        "     ____ 󱉟  󰯆  󰋄  󰓥  󰢫  󰴒  󰻀      󰟔   ____      ",         
+        "     ____ 󱉟  󰯆  󰋄  󰓥  󰢫  󰴒  󰻀      󰟔   ____      ",
         "                                                    ",
-        "                 󰓠  Thad Edition                    ",         
+        "                 󰓠  Thad Edition                    ",
 
       }
 
 --       dashboard.section.header.val = {
---            "                              .............                                   ", 
+--            "                              .............                                   ",
 --            "                        ..';;,...       .....   .......                       ",
 --            "                       ''.'...              ';'..........                     ",
 --            "                       ..';,.',.         .,::c;.        ..                    ",
@@ -55,11 +55,13 @@ return {
         dashboard.section.buttons.val = {
         dashboard.button("b", "󰂺  > Bookmarks", ":TelescopeBookmarks<CR>"),
         dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
-        dashboard.button("f", "  > Find file", ":Telescope find_files<CR>"),
-        dashboard.button("h", "󱉽  > Vault Home", ":e /home/thadryan/Documents/Vault/0_working-memory.md<CR> | :NvimTreeOpen<CR>"),
-        dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
-        dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
+        dashboard.button("f", "󱉶  > Find file", ":Telescope find_files<CR>"),
+        dashboard.button("h", "󱉽  > Vault Home",
+                    ":e /home/thadryan/Documents/Vault/0_working-memory.md<CR> | :NvimTreeOpen<CR>"),
+        dashboard.button("q", "󰩈 > Quit NVIM", ":qa<CR>"),
+        dashboard.button("r", "  > Recent", ":Telescope oldfiles <CR>"),
         dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h<cr>"),
+        dashboard.button("t", " > Tasks", ":TODOTelescope cwd=/home/thadryan/Documents/Vault/_HQ_/<cr>"),
         dashboard.button("u", "  > Update plugins", ":Lazy update<CR>"),
         dashboard.button("w", "󱁿  > View Workspaces", ":Telescope workspaces<CR>")
       }
@@ -77,14 +79,14 @@ return {
             { "'We are what we pretend to be, so we must be careful what we pretend to be.'",
                         "", "— Kurt Vonnegut" },
 
-            {"'As stupid and vicious as men are, this is a lovely day.'", 
+            {"'As stupid and vicious as men are, this is a lovely day.'",
                         "", "- Kurt Vonnegut"},
 
             {"'If Jesus was alive today, we would kill him with lethal injection. I call that progress. We would have to kill him for the same reason he was killed the first time. His ideas are just too liberal.'", "- Kurt Vonnegut"},
 
             {"'Hello babies. Welcome to Earth. It's hot in the summer and cold in the winter. It's round and wet and crowded. On the outside, babies, you've got a hundred years here. There's only one rule that I know of, babies-God damn it, you've got to be kind.'", "- Kurt Vonnegut"},
 
-            {"'We're here to get each other through this thing, whatever it is.'", 
+            {"'We're here to get each other through this thing, whatever it is.'",
                     "", "- Mark Vonnegut"},
 
             {"'The most radical, audacious thing to think is that there might be some point to working hard and thinking hard and reading hard and writing hard and trying to be of service'", "-- Mark Vonnegut"}
