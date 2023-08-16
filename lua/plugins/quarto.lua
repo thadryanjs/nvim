@@ -285,12 +285,12 @@ return {
 
       ---- These cause an error on startup but don't I'm not sure what it does and
       ---- changing it messes with a few things
-        
+
       local lua_library_files = vim.api.nvim_get_runtime_file("", true)
       local resource_path = get_quarto_resource_path()
       -- table.insert(lua_library_files, resource_path .. '/lua-types')
-      table.insert(lua_library_files, '/opt/quarto/bin' .. '/lua-types') 
-      table.insert(lua_library_files, '/opt/quarto/share' .. '/lua-types') 
+      table.insert(lua_library_files, '/opt/quarto/bin' .. '/lua-types')
+      table.insert(lua_library_files, '/opt/quarto/share' .. '/lua-types')
 
       local lua_plugin_paths = {}
       table.insert(lua_plugin_paths, 'opt/quarto/bin' .. '/lua-plugin/plugin.lua')
@@ -352,6 +352,7 @@ return {
         on_attach = on_attach,
         capabilities = capabilities,
         flags = lsp_flags,
+        filetypes = { 'jl', 'qmd' }
       }
 
       lspconfig.bashls.setup {

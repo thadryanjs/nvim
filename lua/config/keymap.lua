@@ -234,6 +234,10 @@ wk.register(
         c = { ':DiffviewClose<cr>', 'close' },
       }
     },
+    t = {
+        name = "task",
+        t = {":TODOTelescope cwd=/home/thadryan/Documents/Vault/_HQ_/<cr>", "tasks"}
+    },
     u = {
       name = 'undotree',
       u = { ":UndotreeToggle<cr>", "toggle" },
