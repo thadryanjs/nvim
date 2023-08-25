@@ -100,7 +100,7 @@ vim.g.boo_colorscheme_italic = false
 -- grammarous stuff
 vim.cmd("let g:grammarous#disabled_rules = []")
 vim.cmd("let g:grammarous#default_comments_only_filetypes = {'*' : 1, 'help' : 0, 'markdown' : 0}")
-vim.cmd("let g:grammarous#show_first_error = 1")
+--vim.cmd("let g:grammarous#show_first_error = 1")
 vim.cmd("let g:grammarous#jar_url = 'https://www.languagetool.org/download/LanguageTool-5.9.zip'")
 
 
