@@ -93,8 +93,17 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("")', {expr=true, noremap=
 vim.g.boo_colorscheme_italic = false
 
 -- fine commandline
-vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader> b", "<cmd>Telescope buffers<CR>", {noremap = true})
+-- vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+-- don't need cmdline if I have status line and fine cmdline
+-- vim.cmd("set cmdheight=0")
+
+-- grammarous stuff
+vim.cmd("let g:grammarous#disabled_rules = []")
+vim.cmd("let g:grammarous#default_comments_only_filetypes = {'*' : 1, 'help' : 0, 'markdown' : 0}")
+vim.cmd("let g:grammarous#show_first_error = 1")
+vim.cmd("let g:grammarous#jar_url = 'https://www.languagetool.org/download/LanguageTool-5.9.zip'")
+
+
 
 -- commands
 vim.api.nvim_create_user_command(

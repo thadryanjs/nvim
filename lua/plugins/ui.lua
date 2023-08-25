@@ -57,7 +57,7 @@ return {
      telescope.load_extension('workspaces')
    end
    },
-   
+
    { 'nvim-telescope/telescope-ui-select.nvim' },
    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
    { 'nvim-telescope/telescope-dap.nvim' },
@@ -72,7 +72,7 @@ return {
        local git_blame = require('gitblame')
        vim.g.gitblame_display_virtual_text = 0
        vim.o.shortmess = vim.o.shortmess .. "S" -- this is for the search_count function so lua can know this is `lua expression`
-       --function for optimizing the search count 
+       --function for optimizing the search count
        local function search_count()
          if vim.api.nvim_get_vvar("hlsearch") == 1 then
            local res = vim.fn.searchcount({ maxcount = 999, timeout = 500 })
@@ -146,7 +146,7 @@ return {
    { 'simrat39/symbols-outline.nvim', config = function()
      require("symbols-outline").setup()
    end },
-   
+
    -- terminal
    { "akinsho/toggleterm.nvim", version = '*', config = function()
      require("toggleterm").setup {
@@ -155,7 +155,7 @@ return {
      }
    end
    },
-   
+
    -- show diagnostics list
    { "folke/trouble.nvim", config = function()
      require("trouble").setup {}
@@ -212,7 +212,7 @@ return {
     --         use_bookmark_dir = 0,   -- if a bookmark is part of a bookmarked directory, cd to that direcrtory (works independently of cwd_on_open)
     --         open_new_tab = 0,       -- open bookmark in a new tab.
     --     }
-    -- end 
+    -- end
     -- }
   -- { 'lukas-reineke/indent-blankline.nvim', config = function()
   --   require("indent_blankline").setup {
