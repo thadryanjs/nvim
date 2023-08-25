@@ -95,7 +95,8 @@ vim.g.boo_colorscheme_italic = false
 -- fine commandline
 -- vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
 -- don't need cmdline if I have status line and fine cmdline
--- vim.cmd("set cmdheight=0")
+-- When authenticating Copilot, I have to undo this
+vim.cmd("set cmdheight=0")
 
 -- grammarous stuff
 vim.cmd("let g:grammarous#disabled_rules = []")
