@@ -234,26 +234,45 @@ return {
       -- $home/.config/marksman/config.toml :
       -- [core]
       -- markdown.file_extensions = ["md", "markdown", "qmd"]
-      lspconfig.marksman.setup {
-        on_attach = on_attach2,
-        capabilities = capabilities,
-        filetypes = { 'markdown', 'quarto' },
-        root_dir = util.root_pattern(".git", ".marksman.toml", "_quarto.yml"),
-      }
 
-      -- -- another optional language server for grammar and spelling
-      -- -- <https://github.com/valentjn/ltex-ls>
-      -- lspconfig.ltex.setup {
-      --   on_attach = on_attach2,
-      --   capabilities = capabilities,
-      --   filetypes = { "markdown", "tex", "quarto" },
-      -- }
+
+--      lspconfig.marksman.setup {
+--        on_attach = on_attach2,
+--        capabilities = capabilities,
+--        filetypes = { 'markdown', 'quarto' },
+--        root_dir = util.root_pattern(".git", ".marksman.toml", "_quarto.yml"),
+--      }
+
+      -- another optional language server for grammar and spelling
+      -- <https://github.com/valentjn/ltex-ls>
+      lspconfig.ltex.setup {
+          autostart = false,
+          on_attach = on_attach2,
+          capabilities = capabilities,
+          filetypes = { "markdown", "tex", "quarto", "text"},
+          settings = {
+            ltex = {
+              -- this disables spelling but keeps grammar
+              disabledRules = {
+                ["en"]    = { "MORFOLOGIK_RULE_EN"    },
+                ["en-AU"] = { "MORFOLOGIK_RULE_EN_AU" },
+                ["en-CA"] = { "MORFOLOGIK_RULE_EN_CA" },
+                ["en-GB"] = { "MORFOLOGIK_RULE_EN_GB" },
+                ["en-NZ"] = { "MORFOLOGIK_RULE_EN_NZ" },
+                ["en-US"] = { "MORFOLOGIK_RULE_EN_US" },
+                ["en-ZA"] = { "MORFOLOGIK_RULE_EN_ZA" },
+                ["es"]    = { "MORFOLOGIK_RULE_ES"    },
+                ["it"]    = { "MORFOLOGIK_RULE_IT_IT" },
+                ["de"]    = { "MORFOLOGIK_RULE_DE_DE" },
+              },
+            }
+          }
+      }
 
       lspconfig.r_language_server.setup {
         on_attach = on_attach,
         capabilities = capabilities,
-        flags = lsp_flags--,
-        -- cmd = { "/home/thadryan/anaconda3/envs/test/bin/R", "--slave", "-e", "languageserver::run()" }
+        flags = lsp_flags,
       }
 
       lspconfig.emmet_ls.setup {
@@ -267,6 +286,7 @@ return {
         capabilities = capabilities,
         flags = lsp_flags
       }
+
 
       local function strsplit(s, delimiter)
         local result = {}

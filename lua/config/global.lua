@@ -75,10 +75,10 @@ vim.opt.formatoptions:remove({ 'c', 'r', 'o' })
 -- hide cmdline when not used
 vim.opt.cmdheight = 1
 
+-- https://stackoverflow.com/questions/69290794/nvim-lsp-change-lspconfig-diagnostic-message-location
 vim.diagnostic.config({
   virtual_text = false
 })
-
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
@@ -93,17 +93,9 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("")', {expr=true, noremap=
 vim.g.boo_colorscheme_italic = false
 
 -- fine commandline
--- vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
--- don't need cmdline if I have status line and fine cmdline
--- When authenticating Copilot, I have to undo this
+vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+-- don't need cmdline if I have status line and fine cmdline (When authenticating Copilot, I have to undo this)
 vim.cmd("set cmdheight=0")
-
--- grammarous stuff
-vim.cmd("let g:grammarous#disabled_rules = []")
-vim.cmd("let g:grammarous#default_comments_only_filetypes = {'*' : 1, 'help' : 0, 'markdown' : 0}")
---vim.cmd("let g:grammarous#show_first_error = 1")
-vim.cmd("let g:grammarous#jar_url = 'https://www.languagetool.org/download/LanguageTool-5.9.zip'")
-
 
 
 -- commands

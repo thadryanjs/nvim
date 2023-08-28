@@ -5,4 +5,3 @@ require 'config.keymap'
 
 -- set the colorscheme
 vim.cmd("colorscheme boo")
-
