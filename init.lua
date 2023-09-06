@@ -4,5 +4,6 @@ require 'config.autocommands'
 require 'config.keymap'
 
 -- set the colorscheme
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme moonfly")
+
 

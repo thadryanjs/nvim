@@ -8,6 +8,7 @@ return {
                 ["core.defaults"] = {}, -- loads default behaviour
 --                ["core.concealer"] = {}, -- adds pretty icons to your documents,
 --                ["core.integrations.telescope"] = {},
+                ["core.export"] = {},
                 ["core.dirman"] = { -- manages neorg workspaces
                     config = {
                         workspaces = {
