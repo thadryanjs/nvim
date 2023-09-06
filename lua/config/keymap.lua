@@ -237,7 +237,8 @@ wk.register(
     n = {
             name = "neorg",
             w = { ":Neorg workspace ", "neorg workspaces" }, -- have to hit <space> after
-            r = { ":Neorg return<cr>", "neorg return"}
+            r = { ":Neorg return<cr>", "neorg return"},
+            h = { ":Neorg workspace home<cr>", "neorg home"}
     },
     -- t = {
     --     name = "task",
