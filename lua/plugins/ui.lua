@@ -55,6 +55,7 @@ return {
      telescope.load_extension('file_browser')
      telescope.load_extension('dap')
      telescope.load_extension('workspaces')
+--     telescope.load_extension('project_nvim')
    end
    },
 
@@ -63,7 +64,7 @@ return {
    { 'nvim-telescope/telescope-dap.nvim' },
    { 'nvim-telescope/telescope-file-browser.nvim' },
 
-   -- { 'nvim-telescope/telescope-project.nvim' },
+--   { 'nvim-telescope/telescope-project.nvim' },
    { 'nvim-lualine/lualine.nvim',
      dependencies = {
        { 'f-person/git-blame.nvim' },

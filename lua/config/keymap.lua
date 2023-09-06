@@ -234,10 +234,15 @@ wk.register(
         c = { ':DiffviewClose<cr>', 'close' },
       }
     },
-    t = {
-        name = "task",
-        t = {":TODOTelescope cwd=/home/thadryan/Documents/Vault/_HQ_/<cr>", "tasks"}
+    n = {
+            name = "neorg",
+            w = { ":Neorg workspace ", "neorg workspaces" }, -- have to hit <space> after
+            r = { ":Neorg return<cr>", "neorg return"}
     },
+    -- t = {
+    --     name = "task",
+    --     t = {":TODOTelescope cwd=/home/thadryan/Documents/Vault/_HQ_/<cr>", "tasks"}
+    -- },
     u = {
       name = 'undotree',
       u = { ":UndotreeToggle<cr>", "toggle" },
@@ -297,5 +302,5 @@ wk.register({
   ['<cm-i>'] = { '<esc>o```{python}<cr>```<esc>O', "r code chunk" },
   ['<m-I>'] = { '<esc>o```{python}<cr>```<esc>O', "r code chunk" },
   --['<m-t>'] = { '- [ ] ', "obsidian task" },
-  ['<m-t>'] = { '-- TASK ', "nvim task" },
+  ['<m-t>'] = { '- | |', "norg task" },
 }, { mode = 'i' })

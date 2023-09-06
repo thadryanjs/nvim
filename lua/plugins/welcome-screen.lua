@@ -57,13 +57,13 @@ return {
         dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
         dashboard.button("f", "󱉶  > Find file", ":Telescope find_files<CR>"),
         dashboard.button("h", "󱉽  > Vault Home",
-                    ":e /home/thadryan/Documents/Vault/0_working-memory.md<CR> | :NvimTreeOpen<CR>"),
+                    ":e /home/thadryan/Documents/Vault/neorg-overview.norg<CR> | :NvimTreeOpen<CR>"),
         dashboard.button("q", "󰩈 > Quit NVIM", ":qa<CR>"),
         dashboard.button("r", "  > Recent", ":Telescope oldfiles <CR>"),
         dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h<cr>"),
-        dashboard.button("t", " > Tasks", ":TODOTelescope cwd=/home/thadryan/Documents/Vault/_HQ_/<cr>"),
+--        dashboard.button("t", "  > Tasks", ":TODOTelescope cwd=/home/thadryan/Documents/Vault/_HQ_/<cr>"),
         dashboard.button("u", "  > Update plugins", ":Lazy update<CR>"),
-        dashboard.button("w", "󱁿  > View Workspaces", ":Telescope workspaces<CR>")
+ --       dashboard.button("w", "󱁿  > View Workspaces", ":Telescope workspaces<CR>")
       }
 
       local fortune = require("alpha.fortune")
