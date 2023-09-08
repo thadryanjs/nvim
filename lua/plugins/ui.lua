@@ -59,6 +59,7 @@ return {
             telescope.load_extension('file_browser')
             telescope.load_extension('dap')
             telescope.load_extension('harpoon')
+            telescope.load_extension("workspaces")
             -- telescope.load_extension('neorg-telescope')
         end
     },

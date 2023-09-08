@@ -62,6 +62,7 @@ return {
                 dashboard.button("r", "  > Recent", ":Telescope oldfiles <CR>"),
                 dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h<cr>"),
                 dashboard.button("u", "  > Update plugins", ":Lazy update<CR>"),
+                dashboard.button("w", "  > Workspaces", ":Telescope workspaces<CR>"),
             }
 
             local fortune = require("alpha.fortune")

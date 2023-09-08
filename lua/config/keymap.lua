@@ -181,7 +181,8 @@ wk.register(
         },
         f = {
             name = 'find (telescope)',
-            o = { ':TelescopeBookmarks<cr>', 'bookmarks (all)' },
+            w = { ':Telescope workspaces<CR>', 'workspaces' },
+            o = { ':TelescopeBookmarks<CR>', 'bookmarks (all)' },
             u = { ':TelescopeBookmarksCurrentFile<cr>', 'bookmarks (current file)' },
             f = { '<cmd>Telescope find_files<cr>', 'files' },
             h = { '<cmd>Telescope help_tags<cr>', 'help' },
