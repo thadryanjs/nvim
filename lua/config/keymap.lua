@@ -1,6 +1,6 @@
 local wk = require("which-key")
 
-P = function(x)
+p = function(x)
     print(vim.inspect(x))
     return (x)
 end

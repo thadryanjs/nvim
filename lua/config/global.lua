@@ -73,7 +73,7 @@ vim.opt.cmdheight = 1
 
 -- https://stackoverflow.com/questions/69290794/nvim-lsp-change-lspconfig-diagnostic-message-location
 vim.diagnostic.config({
-  virtual_text = false
+    virtual_text = false
 })
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
@@ -100,20 +100,20 @@ vim.g.boo_colorscheme_italic = false
 -- commands
 
 vim.api.nvim_create_user_command(
-  'TelescopeBookmarks',
-  function(input)
-      vim.cmd("lua require('telescope').extensions.vim_bookmarks.all({width_text=45})")
-  end,
-  {}
+    'TelescopeBookmarks',
+    function(input)
+        vim.cmd("lua require('telescope').extensions.vim_bookmarks.all({width_text=45})")
+    end,
+    {}
 )
 
 
 vim.api.nvim_create_user_command(
-  'TelescopeBookmarksCurrentFile',
-  function(input)
-      vim.cmd("lua require('telescope').extensions.vim_bookmarks.current_file({width_text=45})")
-  end,
-  {}
+    'TelescopeBookmarksCurrentFile',
+    function(input)
+        vim.cmd("lua require('telescope').extensions.vim_bookmarks.current_file({width_text=45})")
+    end,
+    {}
 )
 
 
