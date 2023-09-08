@@ -2,10 +2,6 @@ vim.g.markdown_fenced_languages = { 'html', 'python', 'bash=sh', 'R=r' }
 vim.opt.termguicolors = true
 vim.opt.modifiable = true
 
--- Python environment (doesn't work in quarto for regular Python)
--- vim.g.python3_host_prog = '/home/thadryan/anaconda3/envs/binf1/bin/python'
--- vim.env.VIRTUAL_ENV = '/home/thadryan/anaconda3/envs/binf1/bin/python'
-
 -- more opinionated
 vim.opt.number = true                  -- show linenumbers
 vim.opt.relativenumber = true
@@ -89,36 +85,20 @@ vim.g.bookmark_auto_save_file = "/home/thadryan/Documents/Templates/vim-bookmark
 -- Copilot stuff
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("")', {expr=true, noremap=true, script=true})
 
--- colorscheme options for BOO
-vim.g.boo_colorscheme_italic = false
+-- colorscheme options for BOO (shold move this to other part of config)
+-- vim.g.boo_colorscheme_italic = false
+
+
 
 -- fine commandline
-vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+-- vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
 -- don't need cmdline if I have status line and fine cmdline (When authenticating Copilot, I have to undo this)
-vim.cmd("set cmdheight=0")
+-- vim.cmd("set cmdheight=0")
+
 
 
 -- commands
-vim.api.nvim_create_user_command(
-  'WordProcessorMode',
-  function(input)
-      vim.cmd("set textwidth=0")
-      vim.cmd("set nonumber")
-      vim.cmd("set wrap")
-      vim.cmd("nmap j gj")
-      vim.cmd("nmap k gk")
-      vim.cmd("set linebreak")
-      vim.cmd("setlocal smartindent")
-      vim.cmd("setlocal noexpandtab")
-      vim.cmd("setlocal spell spelllang=en_us")
-      -- vim.cmd("hi clear SpellBad")
-      -- vim.cmd("hi SpellBad cterm=underline")
-      -- vim.cmd("hi clear SpellCap")
-  end,
-  {}
-)
 
---
 vim.api.nvim_create_user_command(
   'TelescopeBookmarks',
   function(input)

@@ -55,6 +55,7 @@ return {
      telescope.load_extension('file_browser')
      telescope.load_extension('dap')
      telescope.load_extension('workspaces')
+        telescope.load_extension('harpoon')
 --     telescope.load_extension('project_nvim')
    end
    },
@@ -119,28 +120,28 @@ return {
 
    -- { 'RRethy/vim-illuminate' }, -- highlight current word
    -- filetree
-   { 'nvim-tree/nvim-tree.lua',
-     keys = {
-       { '<c-b>', ':NvimTreeToggle<cr>' },
-     },
-     config = function()
-       require 'nvim-tree'.setup {
-         disable_netrw       = true,
-         -- open_on_setup       = false,
-         update_focused_file = {
-           enable = true,
-         },
-         git                 = {
-           enable = true,
-           ignore = false,
-           timeout = 500,
-         },
-         diagnostics         = {
-           enable = true,
-         },
-       }
-     end
-   },
+    { 'nvim-tree/nvim-tree.lua',
+        keys = {
+            { '<c-b>', ':NvimTreeToggle<cr>' },
+        },
+        config = function()
+            require 'nvim-tree'.setup {
+                disable_netrw = true,
+                update_cwd = true,
+                update_focused_file = {
+                    enable = true,
+                },
+                git = {
+                    enable = true,
+                    ignore = false,
+                    timeout = 500,
+                },
+                diagnostics = {
+                    enable = true,
+                },
+            }
+        end
+    },
 
    -- show keybinding help window
    { 'folke/which-key.nvim' },

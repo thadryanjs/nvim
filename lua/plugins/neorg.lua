@@ -1,13 +1,13 @@
 return {
     {"nvim-neorg/neorg",
     build = ":Neorg sync-parsers",
--- dependencies = {{ "nvim-lua/plenary.nvim" }, { "nvim-neorg/neorg-telescope" }},
+    -- dependencies = {{ "nvim-lua/plenary.nvim" }, { "nvim-neorg/neorg-telescope" }},
     config = function()
         require("neorg").setup {
             load = {
                 ["core.defaults"] = {}, -- loads default behaviour
---                ["core.concealer"] = {}, -- adds pretty icons to your documents,
---                ["core.integrations.telescope"] = {},
+                -- ["core.concealer"] = {}, -- adds pretty icons to your documents,
+                -- ["core.integrations.telescope"] = {},
                 ["core.export"] = {},
                 ["core.dirman"] = { -- manages neorg workspaces
                     config = {

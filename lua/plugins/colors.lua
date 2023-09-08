@@ -2,6 +2,7 @@ return {
 
     {"bluz71/vim-moonfly-colors"},
     {"ramojus/mellifluous.nvim"},
+    {"DeviusVim/deviuspro.nvim"},
     { 'shaunsingh/nord.nvim' },
     { 'folke/tokyonight.nvim', config = function()
         require("tokyonight").setup {
@@ -26,13 +27,8 @@ return {
             },
             transparent_background = false,
         }
-        -- vim.cmd.colorscheme 'catppuccin'
-        -- local colors = require('catppuccin.palettes.mocha')
-        -- vim.api.nvim_set_hl(0, 'Tabline', {fg = colors.green, bg = colors.mantle})
-        -- vim.api.nvim_set_hl(0, 'TermCursor', {fg =  '#A6E3A1', bg = '#A6E3A1'})
     end
     },
-
     { 'rose-pine/neovim', name = 'rose-pine', config = function()
         require('rose-pine').setup({
             --- @usage 'auto'|'main'|'moon'|'dawn'
