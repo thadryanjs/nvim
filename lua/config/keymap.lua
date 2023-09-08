@@ -107,6 +107,10 @@ nmap('<c-k>', '<c-w>k')
 nmap('H', '<cmd>tabprevious<cr>')
 nmap('L', '<cmd>tabnext<cr>')
 
+
+-- custom extra
+nmap('<c-b>', ':Neotree toggle dir=%:p:h<cr>')
+
 local function toggle_light_dark_theme()
     if vim.o.background == 'light' then
         vim.o.background = 'dark'
@@ -177,6 +181,8 @@ wk.register(
         },
         f = {
             name = 'find (telescope)',
+            o = { ':TelescopeBookmarks<cr>', 'bookmarks (all)' },
+            u = { ':TelescopeBookmarksCurrentFile<cr>', 'bookmarks (current file)' },
             f = { '<cmd>Telescope find_files<cr>', 'files' },
             h = { '<cmd>Telescope help_tags<cr>', 'help' },
             k = { '<cmd>Telescope keymaps<cr>', 'keymaps' },
@@ -198,6 +204,8 @@ wk.register(
             a = {":lua require('harpoon.mark').add_file()<cr>", "add"},
             q = {":lua require('harpoon.ui').toggle_quick_menu()<cr>", "quick menu"},
             p = {":lua require('harpoon.ui').nav_file(1)<cr>", "previous"},
+            n = {":lua require('harpoon.ui').nav_file(2)<cr>", "next"},
+            t = {": Telescope harpoon marks"},
 
         },
         -- I will be using harpoon more than help, so I gave it h
@@ -286,6 +294,7 @@ wk.register({
     ['<m-i>']         = { 'o```{r}<cr>```<esc>O', "r code chunk" },
     ['<cm-i>']        = { 'o```{python}<cr>```<esc>O', "r code chunk" },
     ['<m-I>']         = { 'o```{python}<cr>```<esc>O', "r code chunk" },
+    --['<c-b>']           = { "Neotree dir=%:p:h", 'Tree in dir of current file'}
 }, { mode = 'n' })
 
 

@@ -11,7 +11,7 @@ vim.opt.mouse = 'a'                    -- enable mouse
 vim.opt.mousefocus = true
 vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
 vim.opt.linebreak = true
-vim.opt.autochdir = true
+vim.opt.autochdir = false
 vim.opt.undofile = true
 vim.opt.cursorline = true
 vim.opt.guifont='CascadiaCode'
@@ -86,7 +86,7 @@ vim.g.bookmark_auto_save_file = "/home/thadryan/Documents/Templates/vim-bookmark
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("")', {expr=true, noremap=true, script=true})
 
 -- colorscheme options for BOO (shold move this to other part of config)
--- vim.g.boo_colorscheme_italic = false
+vim.g.boo_colorscheme_italic = false
 
 
 
