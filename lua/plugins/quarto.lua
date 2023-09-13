@@ -17,34 +17,6 @@ return {
                     }
                 end,
             },
-
-            -- optional
-            -- { 'quarto-dev/quarto-vim',
-            --   ft = 'quarto',
-            --   dependencies = { 'vim-pandoc/vim-pandoc-syntax' },
-            --   -- note: needs additional syntax highlighting enabled for markdown
-            --   --       in `nvim-treesitter`
-            --   config = function()
-            -- conceal can be tricky because both
-            -- the treesitter highlighting and the
-            -- regex vim syntax files can define conceals
-            --
-            -- -- see `:h conceallevel`
-            -- vim.opt.conceallevel = 1
-            --
-            -- -- disable conceal in markdown/quarto
-            -- vim.g['pandoc#syntax#conceal#use'] = false
-            --
-            -- -- embeds are already handled by treesitter injectons
-            -- vim.g['pandoc#syntax#codeblocks#embeds#use'] = false
-            -- vim.g['pandoc#syntax#conceal#blacklist'] = { 'codeblock_delim', 'codeblock_start' }
-            --
-            -- -- but allow some types of conceal in math regions:
-            -- -- see `:h g:tex_conceal`
-            -- vim.g['tex_conceal'] = 'gm'
-            -- --   end
-            -- },
-
         },
         config = function()
             require 'quarto'.setup {
@@ -79,9 +51,10 @@ return {
         config = function()
             require 'nvim-treesitter.configs'.setup {
                 ensure_installed = {
-                    'r', 'python', 'markdown', 'markdown_inline',
-                    'julia', 'bash', 'yaml', 'lua', 'vim',
-                    'query', 'vimdoc', 'latex', 'html', 'css'
+                    'r', 'python', 'markdown', 'markdown_inline', 'cpp',
+                    'julia',' yaml', 'lua', 'latex', 'html', 'css',
+                    'vim', 'vimdoc', 'c',
+
                 },
                 highlight = {
                     enable = true,
@@ -147,6 +120,22 @@ return {
         end
     },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
+
+    -- nvimdap
+    {
+        "jay-babu/mason-nvim-dap.nvim",
+        dependencies = {
+            "williamboman/mason.nvim",
+            "mfussenegger/nvim-dap",
+        },
+        opts = {
+            handlers = {},
+            ensure_installed = {
+                "codelldb"
+            }
+        }
+    },
+
     {
         'neovim/nvim-lspconfig',
         tag = nil,
@@ -286,6 +275,12 @@ return {
                 flags = lsp_flags
             }
 
+            lspconfig.clangd.setup{
+                on_attach = on_attach,
+                capabilities = capabilities,
+                flags = lsp_flags
+            }
+
 
             local function strsplit(s, delimiter)
                 local result = {}
@@ -318,6 +313,7 @@ return {
             -- not upadated yet in automatic mason-lspconfig install,
             -- open mason manually with `<space>vm` and `/` search for lua.
             lspconfig.lua_ls.setup {
+                autostart = false,
                 on_attach = on_attach,
                 capabilities = capabilities,
                 flags = lsp_flags,
@@ -391,6 +387,7 @@ return {
             -- }
         end
     },
+
 
     -- completion
     {

@@ -95,7 +95,7 @@ vim.g.boo_colorscheme_italic = false
 -- don't need cmdline if I have status line and fine cmdline (When authenticating Copilot, I have to undo this)
 -- vim.cmd("set cmdheight=0")
 
-
+vim.g.jukit_mappings = 0
 
 -- commands
 

@@ -17,17 +17,13 @@ return {
         config = true, -- default settings
     },
     {
-        "danymat/neogen",
-        dependencies = "nvim-treesitter/nvim-treesitter",
-        config = true
-    },
-    {
         "chrishrb/gx.nvim",
         event = { "BufEnter" },
         dependencies = { "nvim-lua/plenary.nvim" },
         config = true, -- default settings
     },
-    { "AckslD/nvim-neoclip.lua",
+    {
+        "AckslD/nvim-neoclip.lua",
         requires = {
             {'kkharji/sqlite.lua', module = 'sqlite'},
             -- you'll need at least one of these

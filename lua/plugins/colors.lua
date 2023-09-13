@@ -15,22 +15,6 @@ return {
 
         end},
     { 'EdenEast/nightfox.nvim' },
-    { "catppuccin/nvim", name = "catppuccin",
-        config = function()
-            require("catppuccin").setup {
-                flavour = "mocha", -- mocha, macchiato, frappe, latte
-                term_colors = true,
-                integrations = {
-                    nvimtree = true,
-                    cmp = true,
-                    gitsigns = true,
-                    telescope = true,
-                    treesitter = true
-                },
-                transparent_background = false,
-            }
-        end
-    },
     { 'rose-pine/neovim',
         name = 'rose-pine',
         config = function()

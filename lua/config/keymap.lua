@@ -110,6 +110,7 @@ nmap('L', '<cmd>tabnext<cr>')
 
 -- custom extra
 nmap('<c-b>', ':Neotree toggle dir=%:p:h<cr>')
+nmap('<space>nf', '<S-v>gF')
 
 local function toggle_light_dark_theme()
     if vim.o.background == 'light' then
@@ -252,10 +253,10 @@ wk.register(
             }
         },
         n = {
-            name = "neorg",
-            w = { ":Neorg workspace ", "neorg workspaces" }, -- have to hit <space> after
-            r = { ":Neorg return<cr>", "neorg return"},
-            h = { ":Neorg workspace home<cr>", "neorg home"}
+            name = "navigation",
+            w = { ":Alpha<cr>", "welcome screen"},
+            h = { ":e /home/thadryan/Documents/Vault/workspaces-overview.md<cr> ", "workspace overview"},
+
         },
         -- t = {
         --     name = "task",
@@ -320,6 +321,5 @@ wk.register({
     ['<m-i>'] = { '```{r}<cr>```<esc>O', "r code chunk" },
     ['<cm-i>'] = { '<esc>o```{python}<cr>```<esc>O', "r code chunk" },
     ['<m-I>'] = { '<esc>o```{python}<cr>```<esc>O', "r code chunk" },
-    --['<m-t>'] = { '- [ ] ', "obsidian task" },
-    ['<m-t>'] = { '- | |', "norg task" },
+    ['<m-t>'] = { '- [ ] ', "markdown task" },
 }, { mode = 'i' })

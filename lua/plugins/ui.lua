@@ -1,10 +1,27 @@
 return {
 
-    -- filetree (this is the one I use, the other is just a dependency for the welcome screen)
-    {"nvim-neo-tree/neo-tree.nvim"},
+    {  -- filetree (this is the one I use, the other is just a dependency for the welcome screen)
+        "nvim-neo-tree/neo-tree.nvim",
+        opts = {
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                    show_hidden_count = true,
+                    hide_dotfiles = false,
+                    hide_gitignored = true,
+                    hide_by_name = {
+                        -- '.git',
+                        -- '.DS_Store',
+                        -- 'thumbs.db',
+                    },
+                    never_show = {},
+                },
+            }
+        }
+    },
 
-    -- telescope
-    { 'nvim-telescope/telescope.nvim',
+    {   -- telescope
+        'nvim-telescope/telescope.nvim',
         config = function()
             local telescope = require 'telescope'
             local actions = require('telescope.actions')
@@ -109,24 +126,8 @@ return {
         end
     },
 
-    -- not sure if I'm using this
-    { 'nanozuki/tabby.nvim',
-        config = function()
-            require 'tabby.tabline'.use_preset('tab_only')
-        end
-    },
-
-    -- not too familiar but leaving it here
-    { 'dstein64/nvim-scrollview',
-        config = function()
-            require('scrollview').setup({
-                current_only = true,
-            })
-        end
-    },
-
-    -- filetree - I guess this is a dependency for Alpha which I like so I am leaving it
-    { 'nvim-tree/nvim-tree.lua',
+    { -- filetree - I guess this is a dependency for Alpha which I like so I am leaving it
+        'nvim-tree/nvim-tree.lua',
         -- keys = {
         --     { '<c-b>', ':NvimTreeToggle<cr>' },
         -- },
@@ -151,13 +152,16 @@ return {
 
     -- show keybinding help window
     { 'folke/which-key.nvim' },
-    { 'simrat39/symbols-outline.nvim',
+
+    {   -- very cool
+        'simrat39/symbols-outline.nvim',
         config = function()
             require("symbols-outline").setup()
-        end },
+        end
+    },
 
-    -- terminal
-    { "akinsho/toggleterm.nvim", version = '*',
+    {    -- terminal
+        "akinsho/toggleterm.nvim", version = '*',
         config = function()
             require("toggleterm").setup {
                 open_mapping = [[<c-\>]],
@@ -166,56 +170,59 @@ return {
         end
     },
 
-    -- show diagnostics list
-    { "folke/trouble.nvim", config = function()
-        require("trouble").setup {}
-    end
+    {   -- show diagnostics list
+        "folke/trouble.nvim",
+        config = function()
+            require("trouble").setup {}
+        end
     },
 
     -- ?
     {"MunifTanjim/nui.nvim"},
 
-    -- I am experimenting with not using this
-    -- {"VonHeikemen/fine-cmdline.nvim",
-    --     config = function()
-    --         require('fine-cmdline').setup({
-    --             cmdline = {
-    --                 enable_keymaps = true,
-    --                 smart_history = true,
-    --                 prompt = ': '
-    --             },
-    --             popup = {
-    --                 position = {
-    --                     row = '50%',
-    --                     col = '50%',
-    --                 },
-    --                 size = {
-    --                     width = '60%',
-    --                 },
-    --                 border = {
-    --                     style = 'rounded',
-    --                 },
-    --                 win_options = {
-    --                     winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
-    --                 },
-    --             },
-    --             hooks = {
-    --                 before_mount = function(input)
-    --                     -- code
-    --                 end,
-    --                 after_mount = function(input)
-    --                     -- code
-    --                 end,
-    --                 set_keymaps = function(imap, feedkeys)
-    --                     -- code
-    --                 end
-    --             }
-    --         })
-    --
-    --     end,
-    --     depends = {
-    --         {"MunifTanjim/nui.nvim"},
-    --
-    --     },
-    -- }
+
+    {   -- I am experimenting with not using this
+        "VonHeikemen/fine-cmdline.nvim",
+        enabled = false,
+        config = function()
+            require('fine-cmdline').setup({
+                cmdline = {
+                    enable_keymaps = true,
+                    smart_history = true,
+                    prompt = ': '
+                },
+                popup = {
+                    position = {
+                        row = '50%',
+                        col = '50%',
+                    },
+                    size = {
+                        width = '60%',
+                    },
+                    border = {
+                        style = 'rounded',
+                    },
+                    win_options = {
+                        winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
+                    },
+                },
+                hooks = {
+                    before_mount = function(input)
+                        -- code
+                    end,
+                    after_mount = function(input)
+                        -- code
+                    end,
+                    set_keymaps = function(imap, feedkeys)
+                        -- code
+                    end
+                }
+            })
+
+        end,
+        depends = {
+            {"MunifTanjim/nui.nvim"},
+
+        },
+    }
 }
