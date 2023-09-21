@@ -121,21 +121,21 @@ return {
     },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
 
-    -- nvimdap
-    {
-        "jay-babu/mason-nvim-dap.nvim",
-        dependencies = {
-            "williamboman/mason.nvim",
-            "mfussenegger/nvim-dap",
-        },
-        opts = {
-            handlers = {},
-            ensure_installed = {
-                "codelldb"
-            }
-        }
-    },
-
+    -- -- nvimdap
+    -- {
+    --     "jay-babu/mason-nvim-dap.nvim",
+    --     dependencies = {
+    --         "williamboman/mason.nvim",
+    --         "mfussenegger/nvim-dap",
+    --     },
+    --     opts = {
+    --         handlers = {},
+    --         ensure_installed = {
+    --             "codelldb"
+    --         }
+    --     }
+    -- },
+    --
     {
         'neovim/nvim-lspconfig',
         tag = nil,

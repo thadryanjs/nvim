@@ -111,6 +111,9 @@ nmap('L', '<cmd>tabnext<cr>')
 -- custom extra
 nmap('<c-b>', ':Neotree toggle dir=%:p:h<cr>')
 nmap('<space>nf', '<S-v>gF')
+nmap('<space>js', ":call jukit#send#section(0)<cr>")
+
+
 
 local function toggle_light_dark_theme()
     if vim.o.background == 'light' then

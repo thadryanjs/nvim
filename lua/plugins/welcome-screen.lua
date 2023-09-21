@@ -28,7 +28,7 @@ return {
                 dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
                 dashboard.button("f", "󱉶  > Find file", ":Telescope find_files<CR>"),
                 dashboard.button("h", "󱉽  > Vault Home",
-                    ":e /home/thadryan/Documents/Vault/workspaces-overview.md<CR> | :Neotree dir=%:p:h<CR> | :buffer 3 <CR>" ),
+                    ":e /home/thadryan/Documents/Vault/priority-workspaces-overview.md<CR> | :Neotree dir=%:p:h<CR> | :buffer 3 <CR>" ),
                 dashboard.button("q", "󰩈 > Quit NVIM", ":qa<CR>"),
                 dashboard.button("r", "  > Recent", ":Telescope oldfiles <CR>"),
                 dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h<cr>"),
