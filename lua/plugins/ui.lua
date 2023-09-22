@@ -85,6 +85,7 @@ return {
     { 'nvim-telescope/telescope-dap.nvim' },
     { 'nvim-telescope/telescope-file-browser.nvim' },
     { 'nvim-lualine/lualine.nvim',
+        enabled = true,
         dependencies = {
             { 'f-person/git-blame.nvim' },
         },

@@ -109,11 +109,16 @@ nmap('L', '<cmd>tabnext<cr>')
 
 
 -- custom extra
-nmap('<c-b>', ':Neotree toggle dir=%:p:h<cr>')
+
 nmap('<space>nf', '<S-v>gF')
+
+-- neotree
+nmap('<c-b>', ':Neotree toggle dir=%:p:h<cr>')
+
+-- jukit
 nmap('<space>js', ":call jukit#send#section(0)<cr>")
-
-
+nmap('<space>os', ":call jukit#splits#output()<cr>")
+nmap('<leader>np', ':call jukit#convert#notebook_convert("jupyter-notebook")<cr>')
 
 local function toggle_light_dark_theme()
     if vim.o.background == 'light' then

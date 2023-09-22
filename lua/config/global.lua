@@ -95,9 +95,9 @@ vim.g.boo_colorscheme_italic = false
 -- don't need cmdline if I have status line and fine cmdline (When authenticating Copilot, I have to undo this)
 -- vim.cmd("set cmdheight=0")
 
--- vim.g.jukit_mappings = 0
+vim.g.python3_host_prog = '/home/thadryan/miniconda3/envs/ado-mat/bin/python'
+vim.g.jukit_mappings = 0
 vim.g.jukit_shell_cmd = "R"
-
 -- commands
 
 vim.api.nvim_create_user_command(
